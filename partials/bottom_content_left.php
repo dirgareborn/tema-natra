@@ -23,9 +23,9 @@
 				<div class="box-body">
 					<?php if ($headline["gambar"] != ""): ?>
 						<?php if (is_file(LOKASI_FOTO_ARTIKEL."sedang_".$headline['gambar'])): ?>
-							<img src="<?= AmbilFotoArtikel($headline['gambar'], 'sedang') ?>" width="300" class="img-fluid img-thumbnail" style="float:left; margin:0 8px 4px 0;" />
+							<img src="<?= AmbilFotoArtikel($headline['gambar'], 'sedang') ?>" width="300" class="img-fluid img-thumbnail" style="float:left; margin:0 8px 4px 0;" alt="<?= $data["headline"] ?>" />
 							<?php else: ?>
-								<img src="<?= base_url("$this->theme_folder/$this->theme/images/noimage.png") ?>" width="300" class="img-fluid img-thumbnail" />
+								<img src="<?= base_url("$this->theme_folder/$this->theme/images/noimage.png") ?>" width="300" class="img-fluid img-thumbnail" alt="Gambar Tidak Ditemukan" />
 							<?php endif; ?>
 						<?php endif; ?>
 						<div style="text-align: justify;"><?= $abstrak_headline ?> ...
@@ -75,7 +75,7 @@
 											<?php if($data['gambar']!='' and is_file(LOKASI_FOTO_ARTIKEL."sedang_".$data['gambar'])): ?>
 												<img src="<?= AmbilFotoArtikel($data['gambar'],'sedang') ?>" width="100%" class="img-fluid img-thumbnail" style="float:left; margin:0 8px 4px 0;" alt="<?= $data["judul"] ?>"/>
 												<?php else: ?>
-													<img width="100%" style="float:left; margin:0 8px 4px 0;" class="img-fluid img-thumbnail" src="<?= base_url("$this->theme_folder/$this->theme/images/noimage.png") ?>"/>
+													<img width="100%" style="float:left; margin:0 8px 4px 0;" class="img-fluid img-thumbnail" src="<?= base_url("$this->theme_folder/$this->theme/images/noimage.png") ?>" alt="Gambar Tidak Ditemukan"/>
 												<?php endif; ?>
 											</a>
 																<!--

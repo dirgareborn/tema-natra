@@ -45,7 +45,7 @@
 				<img src="<?= $data['foto'] ?>"
 				data-cycle-title="<span class='cycle-overlay-title'><?= $data['nama'] ?></span>"
 				data-cycle-desc="<?= $data['jabatan'] ?>"
-				>
+				alt="<?= $data['nama'] ?>" />
 			<?php endforeach; ?>
 		</div>
 	</div></div>
