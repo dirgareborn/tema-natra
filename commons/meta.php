@@ -2,12 +2,12 @@
 <meta http-equiv="encoding" content="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<meta name='viewport' content='width=device-width, initial-scale=1' />
-<meta name='google' content='notranslate' />
-<meta name='theme' content='Natra' />
-<meta name='designer' content='Ariandi Ryan Kahfi, S.Pd.' />
-<meta name='theme:designer' content='Ariandi Ryan Kahfi, S.Pd.' />
-<meta name='theme:version' content='4.1.9' />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="google" content="notranslate" />
+<meta name="theme" content="Natra" />
+<meta name="designer" content="Ariandi Ryan Kahfi, S.Pd." />
+<meta name="theme:designer" content="Ariandi Ryan Kahfi, S.Pd." />
+<meta name="theme:version" content="4.1.9" />
 <meta name="keywords" content="<?= $this->setting->website_title.' '.ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>" />
 <meta property="og:site_name" content="<?= ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
 <meta property="og:type" content="article"/>
@@ -25,35 +25,32 @@
 	<?php else:?>
 		<link rel="shortcut icon" href="<?= base_url()?>favicon.ico" />
 	<?php endif;?>
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/bootstrap.min.css"); ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/font-awesome.min.css"); ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/animate.css"); ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/slick.css"); ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/theme.css"); ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/style.css"); ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/custom.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/bootstrap.min.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/font-awesome.min.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/animate.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/slick.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/theme.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/style.css"); ?>">
+	<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/custom.css"); ?>">
 
 <!-- nambah baru lagi
 	<link type='text/css' href="<?= base_url()?>Xassets/bootstrap/css/bootstrap.min.css" rel='stylesheet' />-->
-	<link type='text/css' href="<?= base_url()?>assets/css/font-awesome.min.css" rel='stylesheet' />
+	<link rel="stylesheet" href="<?= base_url()?>assets/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="<?= base_url()?>assets/css/leaflet.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<?php if(isset($single_artikel)): ?>
+		<meta name='description' content="<?= $single_artikel["judul"];?>"/>
 		<meta property="og:title" content="<?= $single_artikel["judul"];?>"/>
 		<meta property="og:url" content="<?= site_url('artikel/'.buat_slug($single_artikel))?>"/>
 		<meta property="og:image" content="<?= base_url()?><?= LOKASI_FOTO_ARTIKEL?>sedang_<?= $single_artikel['gambar'];?>"/>
 		<meta property="og:description" content="<?= potong_teks($single_artikel['isi'], 300)?> ..."/>
-		<?php else: ?>
-			<meta property="og:title" content="<?= ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '
-			.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '
-			.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
-			<meta property="og:url" content="<?= site_url()?>"/>
-			<!--<meta property="og:image" content="<?= base_url("$this->theme_folder/$this->theme/images/header.jpg"); ?>"/>-->
-			<meta property="og:description" content="<?= $this->setting->website_title.' '
-			.ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '
-			.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '
-			.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
-		<?php endif; ?>
+	<?php else: ?>
+		<meta name='description' content="<?= ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
+		<meta property="og:title" content="<?= ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
+		<meta property="og:url" content="<?= site_url()?>"/>
+		<!--<meta property="og:image" content="<?= base_url("$this->theme_folder/$this->theme/images/header.jpg"); ?>"/>-->
+		<meta property="og:description" content="<?= $this->setting->website_title.' '.ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
+	<?php endif; ?>
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ if (window.scrollY == 0) window.scrollTo(0,1); } </script>
 		<script language='javascript' src="<?= base_url('assets/front/js/jquery.min.js'); ?>"></script>
 		<script language='javascript' src="<?= base_url('assets/front/js/jquery.cycle2.min.js') ?>"></script>
@@ -68,7 +65,7 @@
 		<script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
 		<script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/bootstrap/css/dataTables.bootstrap.min.css">
+		<link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/dataTables.bootstrap.min.css">
 		<script src="<?= base_url() ?>assets/bootstrap/js/jquery.dataTables.min.js"></script>
 		<script src="<?= base_url() ?>assets/bootstrap/js/dataTables.bootstrap.min.js"></script>
 		<script type="text/javascript">
