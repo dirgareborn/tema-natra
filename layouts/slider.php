@@ -1,7 +1,8 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
 <div class="slick_slider" style="margin-bottom:5px;">
 	<?php foreach ($slider_gambar['gambar'] as $gambar) : ?>
-		<?php if(is_file($slider_gambar['lokasi'].'sedang_'.$gambar['gambar'])) : ?>
+		<?php if(is_file($slider_gambar['lokasi'].'sedang_'.$gambar['gambar'])): ?>
 			<div class="single_iteam">
 				<style type="text/css">
 					.slick_slider img {

@@ -1,4 +1,4 @@
-<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="single_page_area">
 	<div class="single_page_area">

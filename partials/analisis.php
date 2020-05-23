@@ -1,4 +1,4 @@
-<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <script src="<?= base_url()?>assets/js/highcharts/highcharts.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
@@ -54,19 +54,21 @@
 							<?= $data['nilai']?>,
 						<?php }?>
 					<?php }?>
-					<?php }?>]
-				}]
-			});
+				<?php }?>]
+			}]
+		});
 	};
 </script>
 <style>
-	tr#total{
+	tr {
 		background:#fffdc5;
 		font-size:12px;
 		white-space:nowrap;
 		font-weight:bold;
 	}
-	h3{ margin-left: 10px; }
+	h3 {
+		margin-left: 10px;
+	}
 </style>
 
 <h3><?= $indikator?></h3><br>

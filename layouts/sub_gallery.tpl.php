@@ -1,4 +1,5 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
@@ -35,8 +36,10 @@
 	</div>
 </div>
 <footer id="footer">
-	<?php $this->load->view("$folder_themes/partials/footer_top.php"); ?>
-	<?php $this->load->view("$folder_themes/partials/footer_bottom.php"); ?>
+<?php
+	$this->load->view("$folder_themes/partials/footer_top.php");
+	$this->load->view("$folder_themes/partials/footer_bottom.php");
+?>
 </footer>
 <?php $this->load->view("$folder_themes/commons/meta_footer.php"); ?>
 </body>

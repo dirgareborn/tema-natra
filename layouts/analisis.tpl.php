@@ -27,8 +27,8 @@
 					<div class="content_bottom_left">
 						<div class="single_page_area">
 							<?php if($list_jawab): ?>
-								<div class='box'>";
-									<?php $this->load->view($folder_themes.'/partials/analisis.php'); ?>
+								<div class="box">;
+									<?php $this->load->view("$folder_themes/partials/analisis.php"); ?>
 								</div>
 							<?php else: ?>
 								<div class="">
@@ -65,6 +65,7 @@
 										</div>
 									<?php endforeach; ?>
 								</div>
+							<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -72,13 +73,16 @@
 						<?php $this->load->view("$folder_themes/partials/bottom_content_right.php"); ?>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 	</div>
-	<footer id="footer">
-		<?php $this->load->view("$folder_themes/partials/footer_top.php"); ?>
-		<?php $this->load->view("$folder_themes/partials/footer_bottom.php"); ?>
-	</footer>
-	<?php $this->load->view("$folder_themes/commons/meta_footer.php"); ?>
+</div>
+<footer id="footer">
+<?php
+	$this->load->view("$folder_themes/partials/footer_top.php");
+	$this->load->view("$folder_themes/partials/footer_bottom.php");
+?>
+</footer>
+<?php $this->load->view("$folder_themes/commons/meta_footer.php"); ?>
 </body>
 </html>

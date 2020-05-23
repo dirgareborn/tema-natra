@@ -23,30 +23,32 @@
 			<div class="content_middle"></div>
 			<div class="content_bottom">
 				<div class="col-lg-9 col-md-9">
-					<div class="content_bottom_left"><?php
-					if($tipe == 2){
-						if($tipex==1){
-							$this->load->view($folder_themes.'/partials/statistik_sos.php');
-						}
-					}elseif($tipe == 3){
-						$this->load->view($folder_themes.'/partials/wilayah.php');
-					}elseif($tipe == 4){
-						$this->load->view($folder_themes.'/partials/dpt.php');
-					}else{
-						$this->load->view(Web_Controller::fallback_default($this->theme, '/partials/statistik.php'));
-					} ?>
+					<div class="content_bottom_left">
+						<?php
+							if($tipe == 2 AND $tipex==1):
+								$this->load->view($folder_themes.'/partials/statistik_sos.php');
+							elseif($tipe == 3):
+								$this->load->view($folder_themes.'/partials/wilayah.php');
+							elseif($tipe == 3):
+								$this->load->view($folder_themes.'/partials/dpt.php');
+							else:
+								$this->load->view(Web_Controller::fallback_default($this->theme, '/partials/statistik.php'));
+							endif;
+						?>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3">
+					<?php $this->load->view("$folder_themes/partials/bottom_content_right.php"); ?>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-3">
-				<?php $this->load->view("$folder_themes/partials/bottom_content_right.php"); ?>
-			</div>
-		</div>
 	</section>
 </div>
 </div>
 <footer id="footer">
-	<?php $this->load->view("$folder_themes/partials/footer_top.php"); ?>
-	<?php $this->load->view("$folder_themes/partials/footer_bottom.php"); ?>
+<?php
+	$this->load->view("$folder_themes/partials/footer_top.php");
+	$this->load->view("$folder_themes/partials/footer_bottom.php");
+?>
 </footer>
 <?php $this->load->view("$folder_themes/commons/meta_footer.php"); ?>
 </body>
