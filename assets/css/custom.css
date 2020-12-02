@@ -1,3 +1,7 @@
+
+
+
+
 .data-case-container {
 	background-color: #FFF8DC; width:100%; height: 100%; padding: 0px; margin: 0px;
 }
@@ -11,7 +15,11 @@
 	font-weight: bold; padding: 5px; text-align: center;
 }
 .data-case-container li.info-region {
-	padding: 4px 5px; background-color: #e64946; color: #fff; text-align: center;
+    padding: 4px 5px;
+    background: rgb(14,97,157);
+    background: linear-gradient(180deg, rgba(14,97,157,1) 0%, rgba(4,34,64,1) 100%);
+    /* background-color: #005fae; */
+    color: #fff; text-align: center;
 	font-family: "ants-strong", "Century Gothic", Arial; font-size: 10px; font-weight: bold;
 }
 .data-case-container table td {
@@ -85,7 +93,7 @@
     font-weight: bold;
 }
 .warna{
-	background-color: #e64946;
+	background-color: #005fae;
 	color: white;
 }
 .letak {

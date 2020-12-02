@@ -4,7 +4,7 @@
 if(!isset($_SESSION['mandiri']) OR $_SESSION['mandiri']<>1){
 	if($_SESSION['mandiri_wait']==1){ ?>
 		<div class="single_bottom_rightbar wow fadeInDown">
-			<h2><i class="fa fa-user"></i> Layanan Mandiri</h2>
+			<h2 style="padding:2px;"> <i class="fa fa-user"></i> Layanan Mandiri</h2>
 		</div>
 		<div id="note" align="center" style="margin-bottom:10px;">
 			<font color="red">Gagal 3 kali, NIK atau PIN yang Anda masukkan salah!</font>
@@ -13,14 +13,8 @@ if(!isset($_SESSION['mandiri']) OR $_SESSION['mandiri']<>1){
 			<font color="red">Coba dalam <?= waktu_ind((time()- $_SESSION['mandiri_timeout'])*(-1));?> lagi.</font>
 		</div>
 	<?php } else { ?>
-		<div class="">
 			<div class="single_bottom_rightbar wow fadeInDown">
 				<h2><i class="fa fa-user"></i> Layanan Mandiri</h2>
-				<ul role="tablist" class="nav nav-tabs custom-tabs">
-					<li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#mostPopular3">Login</a></li>
-					<li role="presentation"><a data-toggle="tab" role="tab" aria-controls="messages" href="#recentComent3">Daftar</a></li>
-				</ul>
-				<div class="tab-content">
 					<div id="mostPopular3" class="tab-pane fade in active" role="tabpanel">
 						<form class="contact_form" action="<?= site_url('first/auth')?>" method="post">
 							<input style="margin-bottom:10px;" name="nik" type="text" placeholder="Ketik Nomor KTP" maxlength="16" class="form-control" value="" required>
@@ -28,12 +22,12 @@ if(!isset($_SESSION['mandiri']) OR $_SESSION['mandiri']<>1){
 							<button type="submit" id="but" class="btn btn-primary btn-block">Masuk</button>
 							<?php  if($_SESSION['mandiri_try'] AND isset($_SESSION['mandiri']) AND $_SESSION['mandiri']==-1){ ?>
 								<div id="note" align="center" style="margin-top:10px;" >
-									<font color="red">Kesempatan mencoba <?= ($_SESSION['mandiri_try']-1); ?> kali lagi.</font>
+									<small color="red">Kesempatan mencoba <?= ($_SESSION['mandiri_try']-1); ?> kali lagi.</small>
 								</div>
 							<?php }?>
 							<?php  if(isset($_SESSION['mandiri']) AND $_SESSION['mandiri']==-1){ ?>
 								<div id="note" align="center" style="margin-top:10px;" >
-									<font color="red">Login Gagal. NIK atau PIN yang Anda masukkan salah!</font>
+									<small color="red">Login Gagal. NIK atau PIN yang Anda masukkan salah!</small>
 								</div>
 							<?php }?>
 						</form>
@@ -47,12 +41,6 @@ if(!isset($_SESSION['mandiri']) OR $_SESSION['mandiri']<>1){
 							</table>
 						</ul>
 					</div>
-				</div>
-			</div>
-			<div class="">
-
-			</div>
-		</div>
 	<?php }
 }else{
 	?>

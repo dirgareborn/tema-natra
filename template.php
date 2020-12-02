@@ -12,6 +12,7 @@
   <div id="status">&nbsp;</div>
 </div>
 -->
+
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 <div class="container" style="background-color: #f6f6f6;">
     <header id="header">
@@ -20,6 +21,9 @@
     <div id="navarea">
         <?php $this->load->view("$folder_themes/partials/menu_head.php"); ?>
     </div>
+    <?php if (count($slider_gambar)>0): ?>
+    <?php $this->load->view($folder_themes."/layouts/slider.php") ?>
+    <?php endif; ?>
     <div class="row">
         <section id="mainContent">
             <div class="content_middle"></div>

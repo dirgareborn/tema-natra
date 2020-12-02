@@ -7,7 +7,7 @@
 <meta name='theme' content='Natra' />
 <meta name='designer' content='Ariandi Ryan Kahfi, S.Pd.' />
 <meta name='theme:designer' content='Ariandi Ryan Kahfi, S.Pd.' />
-<meta name='theme:version' content='4.3' />
+<meta name='theme:version' content='4.2.1' />
 <meta name="keywords" content="<?= $this->setting->website_title.' '.ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>" />
 <meta property="og:site_name" content="<?= ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'].' '.ucwords($this->setting->sebutan_kecamatan).' '.$desa['nama_kecamatan'].' '.ucwords($this->setting->sebutan_kabupaten).' '.$desa['nama_kabupaten'];?>"/>
 <meta property="og:type" content="article"/>
@@ -31,6 +31,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/slick.css"); ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/theme.css"); ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/style.css"); ?>">
+	<link rel="stylesheet/less" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/_style.less"); ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/custom.css"); ?>">
 
 <!-- nambah baru lagi
