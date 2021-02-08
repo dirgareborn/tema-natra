@@ -1,13 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <div class="content_bottom_left" style="margin-bottom:10px;">
     <div class="archive_style_1">
-        <div style="margin-top:10px;">
-            <?php if (!empty($teks_berjalan)): ?>
-            <marquee onmouseover="this.stop()" onmouseout="this.start()">
-                <?php $this->load->view($folder_themes.'/layouts/teks_berjalan.php') ?>
-            </marquee>
-            <?php endif; ?>
-        </div>
+        
 		<?php if ($this->setting->covid_data) $this->load->view($folder_themes."/partials/corona-widget.php")?>
 		<?php if ($this->setting->covid_desa) $this->load->view($folder_themes."/partials/corona-local.php");?>
         <?php if ($headline): ?>

@@ -11,10 +11,10 @@
         </div>
         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
           <div class="footer_bottom_right" style="text-align:center;">
-		    <a href="#" rel="noopener noreferrer" target="_blank"> &copy; 2020 Pemerintah Desa Palajau</a>
+		    <a href="#" rel="noopener noreferrer" target="_blank"> &copy; 2020 Pemerintah <?=  ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?></a>
 		   <!-- <i class="fa fa-circle" style="font-size: smaller;"></i> --><br>
 		   <a href="https://github.com/OpenSID/OpenSID" rel="noopener noreferrer" target="_blank">OpenSID <?= AmbilVersi()?></a>
-		   <!-- <a href="<?= site_url(); ?>siteman" rel="noopener noreferrer" target="_blank"> | Natra 4.2.1</a> -->
+		   <a href="<?= site_url(); ?>siteman" rel="noopener noreferrer" target="_blank"> | Natra 4.2.1 </a>
           </div>
         </div>
       </div>

@@ -2,13 +2,6 @@
 
 <?php if($single_artikel["id"]) : ?>
 	<div class="single_page_area" id="<?= 'artikel-'.$single_artikel['judul']?>">
-		<div style="margin-top:0px;">
-			<?php if (!empty($teks_berjalan)): ?>
-				<marquee onmouseover="this.stop()" onmouseout="this.start()">
-					<?php $this->load->view($folder_themes.'/layouts/teks_berjalan.php'); ?>
-				</marquee>
-			<?php endif; ?>
-		</div>
 		<div class="single_category wow fadeInDown">
 			<h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">Artikel</span> </h2>
 		</div>

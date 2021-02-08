@@ -24,7 +24,7 @@
 				</li>
 			</ul>
     		</div>
-    		<div class="navbar-right hidden-xs" style="margin-right: 15px; margin-top: 15px;">
+			<div class="navbar-right hidden-xs" style="margin-right: 15px; margin-top: 15px;">
                   <?php foreach ($sosmed As $data): ?>
     	            <?php if (!empty($data["link"])): ?>
     	            <a href="<?= $data['link']?>" rel="noopener noreferrer" style="padding:2px;">

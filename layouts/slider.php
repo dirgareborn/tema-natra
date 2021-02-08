@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
-<div class="slick_slider" style="margin-bottom:5px;">
+<div class="slick_slider" style="margin-bottom:5px;position:relative">
 	<?php foreach ($slider_gambar['gambar'] as $gambar) : ?>
 		<?php $file_gambar = $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar']; ?>
 		<?php if(is_file($file_gambar)) : ?>
@@ -9,7 +8,6 @@
 					.slick_slider img {
 						width: 100%;
 					}
-
 					.slick_slider, .cycle-slideshow {
 						max-height: 300px;
 						border: 5px solid #e5e5e5;
@@ -26,9 +24,20 @@
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
+	<?php if (!empty($teks_berjalan)): ?>
+		<div class="teks-berjalan">
+			<marquee onmouseover="this.stop()" onmouseout="this.start()">
+				<?php $this->load->view($folder_themes.'/layouts/teks_berjalan.php') ?>
+			</marquee>
+		</div>
+			<?php endif; ?>
 </div>
 <script>
 	$('.tlClogo').bind('contextmenu', function(e) {
 		return false;
 	});
 </script>
+
+
+
+

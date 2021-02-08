@@ -1,18 +1,12 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
-<html>
+<html lang="id_ID">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <?php $this->load->view("$folder_themes/commons/meta.php"); ?>
     <!-- </head> -->
 </head>
 <body onLoad="renderDate()">
-<!--
-<div id="preloader">
-  <div id="status">&nbsp;</div>
-</div>
--->
-
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 <div class="container" style="background-color: #f6f6f6;">
     <header id="header">
